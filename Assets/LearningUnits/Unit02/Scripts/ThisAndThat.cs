@@ -31,19 +31,22 @@ public class ThisAndThat : MonoBehaviour
         if (areBothCubesDetected)
         {
             door.GetComponent<MoveToLocation>().enabled = true;
+
+        if (GameObject)
+                
+            door.GetComponent<MoveToLocation>().enabled = true;
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        //if (other.gameObject something something)
-        //{
-        //    isBlueCubeDeteced = true;
-        //}
+        if (other.GameObject == blueCube)
+        {
+           door.GetComponent<MoveToLocation>().enabled = true;
+        }
 
-        //if (other.gameObject something something)
-        //{
-        //    isRedCubeDetected = true;
-        //}
+        if (other.GameObject == redcube)
+        {
+           door.GetComponent<MoveToLocation>().enabled = true;
+        }
     }
-}
